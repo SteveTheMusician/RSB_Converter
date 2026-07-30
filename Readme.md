@@ -11,3 +11,7 @@
 
 Important: To convert your file back to rsb, you have to put the meta-file, which you got from the extraction beefore, next to it.
 Otherwise the proccess will fail
+
+----
+
+!! Currently u can only use the rsb_converter.py in the src folder (its working fine) - UI Version is comming soon
