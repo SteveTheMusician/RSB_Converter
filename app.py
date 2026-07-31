@@ -5,17 +5,21 @@ app.title("RSB Converter")
 app.geometry("640x360")
 app.resizable(False, False)
 
-# set_appearance_mode('dark')
+# Beide Spalten/Zeilen konfigurieren
+app.grid_columnconfigure(0, weight=1)
+app.grid_rowconfigure(0, weight=1)  # MainFrame nimmt verfügbaren Platz
+app.grid_rowconfigure(1, weight=0)  # Footer bleibt fix
 
-# Footer Frame
-footerFrame = CTkFrame(master=app, width=640, height=100, corner_radius=0)
-footerFrame.pack(expand=True)
-footerFrame.place(relx=0.5, rely=0.86, anchor="center")
+mainFrame = CTkFrame(master=app, corner_radius=6, fg_color="#c87373")
+mainFrame.grid(row=0, column=0, sticky="nsew", padx=10, pady=(10, 5))
 
-btnExtract = CTkButton(master=footerFrame, text="Extract",corner_radius=6, fg_color="transparent",hover_color="#17bdaf",border_color="#17bdaf", border_width=2)
-btnExtract.place(relx=0.55, rely=0.5, anchor="center")
+# Footer Frame unten kleben
+footerFrame = CTkFrame(master=app, width=640, height=80, corner_radius=0)
+footerFrame.grid(row=1, column=0, sticky="we", padx=0, pady=(5, 0))
 
-btnCompile = CTkButton(master=footerFrame, text="Compile",corner_radius=6, fg_color="transparent",hover_color="#b717bd",border_color="#b717bd", border_width=2)
-btnCompile.place(relx=0.8, rely=0.5, anchor="center")
+btnStart = CTkButton(master=footerFrame, text="Start", corner_radius=6, 
+                       fg_color="transparent", hover_color="#17bdaf", 
+                       border_color="#17bdaf", border_width=2)
+btnStart.place(relx=1, rely=0.5, anchor="e", x=-20)
 
 app.mainloop()
