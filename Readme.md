@@ -1,7 +1,7 @@
 # RSB Image Converter
 ## Installs
 - install python 3
-- install pillow via "pip install pillow" in terminal (admin)
+- install pillow via "pip3 install pillow" in terminal (admin)
 
 ## run script
 - Convert RSP to Png: "python {PATH_TO_THE_PYTHON_FILE}\rsb_converter.py to_png {PATH_TO_RSB_FILE}\{YOUR_FILE}.rsb {OUTPUT_FOLDER_NAME}"
